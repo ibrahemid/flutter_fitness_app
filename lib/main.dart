@@ -1,24 +1,25 @@
-import 'core/locator.dart';
-import 'core/providers.dart';
-import 'core/services/navigator_service.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'views/home/home_view.dart';
+import 'package:flutter_fitness_app/home_view.dart';
 
-void main() async {
-  await LocatorInjector.setupLocator();
-  runApp(MainApplication());
-}
+void main() => runApp(MainApplication());
 
 class MainApplication extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MultiProvider(
-      providers: ProviderInjector.providers,
-      child: MaterialApp(
-        navigatorKey: locator<NavigatorService>().navigatorKey,
-        home: HomeView(),
+    return MaterialApp(
+      theme: ThemeData(
+        brightness: Brightness.dark,
+        primaryColor: Colors.lightBlue[800],
+        accentColor: Colors.cyan[600],
+        fontFamily: 'Georgia',
+        textTheme: TextTheme(
+          headline: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
+          title: TextStyle(fontSize: 36.0, fontStyle: FontStyle.italic),
+          body1: TextStyle(fontSize: 14.0, fontFamily: 'Hind'),
+        ),
       ),
+      debugShowCheckedModeBanner: false,
+      home: HomeView(),
     );
   }
 }
