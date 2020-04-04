@@ -13,6 +13,7 @@ class HomeView extends StatelessWidget {
               children: <Widget>[
                 CustomAppBar(),
                 GreetingText(),
+                StatusCard(),
               ],
             ),
           ],
