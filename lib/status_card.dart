@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_fitness_app/chart_top_card.dart';
 
 class StatusCard extends StatefulWidget {
   StatusCard({Key key}) : super(key: key);
@@ -11,9 +12,9 @@ class _StatusCardState extends State<StatusCard> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Stack(
+      child: Column(
         children: <Widget>[
-          // ChartCard(),
+          ChartTopCard(),
           Row(children: <Widget>[
             // NutrationWidget("p1", "p2", "p3", "p4"),
             // NutrationWidget("p1", "p2", "p3", "p4"),
@@ -22,12 +23,12 @@ class _StatusCardState extends State<StatusCard> {
           Row(
             children: <Widget>[
               Container(
-                Text("as"),
-                Text("ds"),
+                child: Text("as"),
+                // Text("ds"),
               ),
               Container(
-                Text("sa"),
-                Text("das"),
+                // Text("sa"),
+                child: Text("das"),
               ),
             ],
           ),
