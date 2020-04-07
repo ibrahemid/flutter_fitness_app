@@ -11,6 +11,7 @@ class MainApplication extends StatelessWidget {
         brightness: Brightness.dark,
         primaryColor: Color(0xff383454),
         accentColor: Colors.cyan[600],
+        indicatorColor: Colors.red,
         fontFamily: 'Georgia',
         textTheme: TextTheme(
           headline: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),

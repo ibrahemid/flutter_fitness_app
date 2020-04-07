@@ -27,63 +27,70 @@ class _ChartTopCardState extends State<ChartTopCard> {
       ),
     ];
 
+    double chartSize = 145;
+    int holeSize = 17;
     var chart = charts.PieChart(series,
         animate: true,
-        defaultRenderer: new charts.ArcRendererConfig(arcWidth: 20));
+        defaultRenderer: new charts.ArcRendererConfig(arcWidth: holeSize));
 
-    var chartWidget = Padding(
-      padding: EdgeInsets.all(32.0),
-      child: SizedBox(
-        height: 200.0,
-        width: 200.0,
-        child: Stack(
-          children: <Widget>[
-            Positioned.fill(
-                child: Align(
-              alignment: Alignment.center,
-              child: Text("assdsd"),
-            )),
-            chart,
-          ],
-        ),
+    var chartWidget = SizedBox(
+      height: chartSize,
+      width: chartSize,
+      child: Stack(
+        children: <Widget>[
+          Positioned.fill(
+              child: Align(
+            alignment: Alignment.center,
+            child: Text("70.2%"),
+          )),
+          chart,
+        ],
       ),
     );
 
-    return Row(
-      children: <Widget>[
-        Container(
-          color: Theme.of(context).primaryColor,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: <Widget>[
-              Text(
-                "Today!🔥",
-                style: TextStyle(fontSize: 18, color: Colors.white),
-              ),
-              Row(
-                children: <Widget>[
-                  Text(
-                    "2105",
-                    style: TextStyle(
-                        fontSize: 13,
-                        color: Colors.white,
-                        fontWeight: FontWeight.w500),
-                  ),
-                  Text(
-                    "Kcal",
-                    style: Theme.of(context).textTheme.display1,
-                  ),
-                ],
-              ),
-              Text(
-                "Goal 30000 Kcl",
-                style: Theme.of(context).textTheme.display1,
-              ),
-            ],
+    return Container(
+      color: Theme.of(context).primaryColor,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          Container(
+            padding: EdgeInsets.only(top: 10, left: 20),
+            color: Theme.of(context).indicatorColor,
+            child: Column(
+              // next to chart text
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Text(
+                  "Today!🔥",
+                  style: TextStyle(fontSize: 48, color: Colors.white),
+                ),
+                Row(
+                  children: <Widget>[
+                    Text(
+                      "2105",
+                      style: TextStyle(
+                          fontSize: 13,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w500),
+                    ),
+                    Text(
+                      "Kcal",
+                      style: Theme.of(context).textTheme.display1,
+                    ),
+                  ],
+                ),
+                Text(
+                  "Goal 30000 Kcl",
+                  style: Theme.of(context).textTheme.display1,
+                ),
+              ],
+            ),
           ),
-        ),
-        chartWidget
-      ],
+          chartWidget,
+        ],
+      ),
     );
 // end of build
   }

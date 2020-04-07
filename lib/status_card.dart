@@ -12,9 +12,10 @@ class _StatusCardState extends State<StatusCard> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.all(20),
       child: Column(
         children: <Widget>[
-          ChartTopCard(),
+          ChartTopCard(), // first item in the row
           Row(children: <Widget>[
             // NutrationWidget("p1", "p2", "p3", "p4"),
             // NutrationWidget("p1", "p2", "p3", "p4"),
@@ -23,13 +24,13 @@ class _StatusCardState extends State<StatusCard> {
           Row(
             children: <Widget>[
               Container(
-                child: Text("as"),
-                // Text("ds"),
-              ),
+                  // child: Text("as"),
+                  // Text("ds"),
+                  ),
               Container(
-                // Text("sa"),
-                child: Text("das"),
-              ),
+                  // Text("sa"),
+                  // child: Text("das"),
+                  ),
             ],
           ),
           // CupsWidget()
