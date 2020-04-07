@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_fitness_app/pie_cahrt.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
 
 // this should
@@ -13,6 +12,43 @@ class ChartTopCard extends StatefulWidget {
 class _ChartTopCardState extends State<ChartTopCard> {
   @override
   Widget build(BuildContext context) {
+    var data = [
+      ChartData(0, 30, Color(0xffFDFBFE)),
+      ChartData(1, 70, Color(0xffFE6F14)),
+    ];
+
+    var series = [
+      charts.Series(
+        domainFn: (ChartData chartData, _) => chartData.domainFn,
+        measureFn: (ChartData chartData, _) => chartData.measureFn,
+        colorFn: (ChartData chartData, _) => chartData.color,
+        id: 'Clicks',
+        data: data,
+      ),
+    ];
+
+    var chart = charts.PieChart(series,
+        animate: true,
+        defaultRenderer: new charts.ArcRendererConfig(arcWidth: 20));
+
+    var chartWidget = Padding(
+      padding: EdgeInsets.all(32.0),
+      child: SizedBox(
+        height: 200.0,
+        width: 200.0,
+        child: Stack(
+          children: <Widget>[
+            Positioned.fill(
+                child: Align(
+              alignment: Alignment.center,
+              child: Text("assdsd"),
+            )),
+            chart,
+          ],
+        ),
+      ),
+    );
+
     return Row(
       children: <Widget>[
         Container(
@@ -46,35 +82,18 @@ class _ChartTopCardState extends State<ChartTopCard> {
             ],
           ),
         ),
-        Padding(
-          padding: EdgeInsets.all(8),
-          child: Container(
-              width: 80, height: 80, child: charts.PieChart(
-        _project.getExpensesToChartSeries(),
-        animate: true,
-        animationDuration: Duration(milliseconds: 500),
-        selectionModels: [
-          new charts.SelectionModelConfig(
-            type: charts.SelectionModelType.info,
-            changedListener: _onSelectionChanged,
-          )
-        ],
-        defaultRenderer: charts.ArcRendererConfig(
-          arcWidth: 25,
-        ),
-      ),
-      Center(
-        child: Text(
-          "88%",
-          style: TextStyle(
-            fontSize: 30.0,
-            color: Colors.blue,
-            fontWeight: FontWeight.bold
-          ),
-        ),
-      )), // customize later
-        )
+        chartWidget
       ],
     );
+// end of build
   }
+}
+
+class ChartData {
+  final int domainFn;
+  final int measureFn;
+  final charts.Color color;
+  ChartData(this.domainFn, this.measureFn, Color color)
+      : this.color = charts.Color(
+            g: color.green, b: color.blue, r: color.red, a: color.alpha);
 }
