@@ -9,11 +9,11 @@ class MainApplication extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
         primaryColor: Color(0xff383454),
-        accentColor: Color(0xff383454),
+        accentColor: Color(0xff7A777C),
         indicatorColor: Colors.red,
-        fontFamily: 'QuickSand',
+        fontFamily: 'QuickSandSemiBold',
         textTheme: TextTheme(
-          title: TextStyle(fontSize: 14.0, fontFamily: "quicksand"),
+          title: TextStyle(fontSize: 14.0, fontFamily: "QuickSandSemiBold"),
           headline: TextStyle(
               //used
               fontSize: 32.0,
@@ -34,13 +34,18 @@ class MainApplication extends StatelessWidget {
               fontSize: 12,
               fontFamily: 'QuickSandSemiBold',
               color: Color(0xff9E9CA5)),
+          display4: TextStyle(
+              // used for 100g text white
+              fontSize: 16,
+              fontFamily: 'QuickSandBold',
+              color: Color(0xff383454)),
           display2: TextStyle(
-              // used for small gray text
+              // used for Today body white text
               fontSize: 32,
               fontFamily: 'QuickSandSemiBold',
               color: Colors.white),
           display3: TextStyle(
-              // used for small gray text
+              // used for 2105 text white
               fontSize: 22,
               fontFamily: 'QuickSandSemiBold',
               color: Colors.white),
