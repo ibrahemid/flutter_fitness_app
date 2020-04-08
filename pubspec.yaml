@@ -14,4 +14,18 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 flutter:
+  fonts:
+    - family: QuickSandBold
+      fonts:
+        - asset: assets/fonts/quicksand_bold.ttf
+
+    - family: QuickSandMed
+      fonts:
+        - asset: assets/fonts/quicksand_med.ttf
+    - family: QuickSandSemiBold
+      fonts:
+          - asset: assets/fonts/quicksand_semibold.ttf
+    - family: QuickSand
+      fonts:
+          - asset: assets/fonts/quicksand_reg.ttf
   uses-material-design: true

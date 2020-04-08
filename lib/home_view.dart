@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_fitness_app/custom_appbar.dart';
 import 'package:flutter_fitness_app/greeting_text.dart';
 import 'package:flutter_fitness_app/status_card.dart';
+
+import 'custom_appbar.dart';
 
 class HomeView extends StatelessWidget {
   @override
@@ -11,6 +12,7 @@ class HomeView extends StatelessWidget {
         child: Stack(
           children: <Widget>[
             Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 CustomAppBar(),
                 GreetingText(),

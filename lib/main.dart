@@ -8,20 +8,42 @@ class MainApplication extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        brightness: Brightness.dark,
         primaryColor: Color(0xff383454),
-        accentColor: Colors.cyan[600],
+        accentColor: Color(0xff383454),
         indicatorColor: Colors.red,
-        fontFamily: 'Georgia',
+        fontFamily: 'QuickSand',
         textTheme: TextTheme(
-          headline: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
-          title: TextStyle(fontSize: 36.0, fontStyle: FontStyle.italic),
-          body1: TextStyle(fontSize: 14.0, fontFamily: 'Hind'),
-          body2: TextStyle(fontSize: 14.0, fontFamily: 'Hind'),
+          title: TextStyle(fontSize: 14.0, fontFamily: "quicksand"),
+          headline: TextStyle(
+              //used
+              fontSize: 32.0,
+              fontFamily: "QuickSandSemiBold",
+              color: Color(0xff383454)),
+          body1: TextStyle(
+//            used for the text above headline
+              fontSize: 20.0,
+              fontFamily: "QuickSandSemiBold",
+              color: Color(0xff383454)),
+          body2: TextStyle(
+              //used for chart value
+              fontSize: 14.0,
+              color: Colors.white,
+              fontFamily: 'QuickSandSemiBold'),
           display1: TextStyle(
-              fontSize: 10, color: Colors.grey, fontWeight: FontWeight.w500),
-          display2: TextStyle(fontSize: 14.0, fontFamily: 'Hind'),
-          display3: TextStyle(fontSize: 14.0, fontFamily: 'Hind'),
+              // used for small gray text
+              fontSize: 12,
+              fontFamily: 'QuickSandSemiBold',
+              color: Color(0xff9E9CA5)),
+          display2: TextStyle(
+              // used for small gray text
+              fontSize: 32,
+              fontFamily: 'QuickSandSemiBold',
+              color: Colors.white),
+          display3: TextStyle(
+              // used for small gray text
+              fontSize: 22,
+              fontFamily: 'QuickSandSemiBold',
+              color: Colors.white),
         ),
       ),
       debugShowCheckedModeBanner: false,

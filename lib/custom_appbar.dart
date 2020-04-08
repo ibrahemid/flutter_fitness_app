@@ -20,7 +20,7 @@ class CustomAppBar extends StatelessWidget {
                 image: DecorationImage(
                     fit: BoxFit.fill,
                     image: NetworkImage(
-                        "https://images.unsplash.com/photo-1518806118471-f28b20a1d79d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"))),
+                        "https://qph.fs.quoracdn.net/main-raw-160579021-obaxaamtbbfzqtgtgpbwxcorldpmqdsh.jpeg"))),
           ),
         ],
       ),

@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
+import 'package:flutter/material.dart';
 
 // this should
 class ChartTopCard extends StatefulWidget {
@@ -26,9 +26,8 @@ class _ChartTopCardState extends State<ChartTopCard> {
         data: data,
       ),
     ];
-
-    double chartSize = 145;
-    int holeSize = 17;
+    double chartSize = 140;
+    int holeSize = 19;
     var chart = charts.PieChart(series,
         animate: true,
         defaultRenderer: new charts.ArcRendererConfig(arcWidth: holeSize));
@@ -41,49 +40,63 @@ class _ChartTopCardState extends State<ChartTopCard> {
           Positioned.fill(
               child: Align(
             alignment: Alignment.center,
-            child: Text("70.2%"),
+            child: Text(
+              "70.2%",
+              style: Theme.of(context).textTheme.body2,
+            ),
           )),
           chart,
         ],
       ),
     );
-
     return Container(
-      color: Theme.of(context).primaryColor,
+      decoration: BoxDecoration(
+        color: Theme.of(context).primaryColor,
+        shape: BoxShape.rectangle,
+        borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(12.0), topRight: Radius.circular(12.0)),
+      ),
       child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           Container(
-            padding: EdgeInsets.only(top: 10, left: 20),
-            color: Theme.of(context).indicatorColor,
+            padding: EdgeInsets.only(top: 16, left: 16),
+//            color: Theme.of(context).indicatorColor,
             child: Column(
               // next to chart text
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                Text(
-                  "Today!🔥",
-                  style: TextStyle(fontSize: 48, color: Colors.white),
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 8),
+                  child: Text(
+                    "Today!🔥",
+                    style: Theme.of(context).textTheme.display2,
+                  ),
                 ),
                 Row(
                   children: <Widget>[
                     Text(
                       "2105",
-                      style: TextStyle(
-                          fontSize: 13,
-                          color: Colors.white,
-                          fontWeight: FontWeight.w500),
+                      style: Theme.of(context).textTheme.display3,
                     ),
-                    Text(
-                      "Kcal",
-                      style: Theme.of(context).textTheme.display1,
+                    Padding(
+                      padding: const EdgeInsets.only(left: 4, top: 4),
+                      child: Text(
+                        "Kcal",
+                        style: Theme.of(context).textTheme.display1,
+                      ),
                     ),
                   ],
                 ),
-                Text(
-                  "Goal 30000 Kcl",
-                  style: Theme.of(context).textTheme.display1,
+                Padding(
+                  padding: const EdgeInsets.only(top: 8),
+                  child: Text(
+                    "Goal 30000 Kcl",
+                    style: Theme.of(context).textTheme.display1,
+                  ),
                 ),
               ],
             ),

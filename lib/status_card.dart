@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_fitness_app/chart_top_card.dart';
+import 'package:flutter_fitness_app/widgets/chart_top_card.dart';
 
 class StatusCard extends StatefulWidget {
   StatusCard({Key key}) : super(key: key);
