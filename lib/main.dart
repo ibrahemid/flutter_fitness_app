@@ -54,6 +54,12 @@ class MainApplication extends StatelessWidget {
               fontSize: 12,
               fontFamily: 'QuickSandBold',
               color: Color(0xff383454)),
+          subtitle: TextStyle(
+//            used popular
+              fontSize: 24.0,
+              fontFamily: 'QuickSandSemiBold',
+              fontWeight: FontWeight.w800,
+              color: Color(0xff383454)),
         ),
       ),
       debugShowCheckedModeBanner: false,

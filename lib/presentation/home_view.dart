@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_fitness_app/presentation/activities_list.dart';
 import 'package:flutter_fitness_app/presentation/status_card.dart';
 
 import '../widgets/custom_appbar.dart';
@@ -17,7 +18,14 @@ class HomeView extends StatelessWidget {
               CustomAppBar(),
               GreetingText(),
               StatusCard(),
-              // StatusCard(),
+              Padding(
+                padding: const EdgeInsets.only(top: 8.0, left: 26.0),
+                child: Text(
+                  "Popular Curce",
+                  style: Theme.of(context).textTheme.subtitle,
+                ),
+              ),
+              ActivitiesList()
             ],
           ),
         ),
