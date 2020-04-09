@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_fitness_app/home_view.dart';
+import 'package:flutter_fitness_app/presentation/home_view.dart';
 
 void main() => runApp(MainApplication());
 
@@ -32,7 +32,7 @@ class MainApplication extends StatelessWidget {
           display1: TextStyle(
               // used for small gray text
               fontSize: 12,
-              fontFamily: 'QuickSandSemiBold',
+              fontFamily: 'QuickSandBold',
               color: Color(0xff9E9CA5)),
           display4: TextStyle(
               // used for 100g text white
@@ -49,6 +49,11 @@ class MainApplication extends StatelessWidget {
               fontSize: 22,
               fontFamily: 'QuickSandSemiBold',
               color: Colors.white),
+          caption: TextStyle(
+              // used for 095L small primary
+              fontSize: 12,
+              fontFamily: 'QuickSandBold',
+              color: Color(0xff383454)),
         ),
       ),
       debugShowCheckedModeBanner: false,

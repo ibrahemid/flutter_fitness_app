@@ -29,4 +29,7 @@ flutter:
     - family: QuickSand
       fonts:
           - asset: assets/fonts/quicksand_reg.ttf
+    - family:  MyFlutterApp
+      fonts:
+        - asset: assets/fonts/MyFlutterApp.ttf
   uses-material-design: true

@@ -12,7 +12,7 @@ class NutritionWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(18.0),
+      padding: EdgeInsets.all(16.0),
       child: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

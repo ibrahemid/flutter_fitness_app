@@ -54,7 +54,7 @@ class _ChartTopCardState extends State<ChartTopCard> {
         color: Theme.of(context).primaryColor,
         shape: BoxShape.rectangle,
         borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(12.0), topRight: Radius.circular(12.0)),
+            topLeft: Radius.circular(8.0), topRight: Radius.circular(8.0)),
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
