@@ -11,17 +11,13 @@ class _WaterIndicatorRowState extends State<WaterIndicatorRow> {
   @override
   Widget build(BuildContext context) {
     // rewrite this !
-    GlassListRepo _glassListRepog = GlassListRepo(6);
-    print("size");
-    print(_glassListRepog.size);
-    print("length");
-    print(_glassListRepog.glassIcons.length);
+    GlassListRepo _glassListRepo = GlassListRepo(6);
     return Container(
         margin: EdgeInsets.only(bottom: 20),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            for (GlassIcon x in _glassListRepog.glassIcons)
+            for (GlassIcon x in _glassListRepo.glassIcons)
               GestureDetector(child: Icon(x.icon))
           ],
         ));

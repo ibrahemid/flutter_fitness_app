@@ -10,7 +10,11 @@ class MainApplication extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Color(0xff383454),
         accentColor: Color(0xff7A777C),
+        backgroundColor: Color(0xffF4F2F4),
         indicatorColor: Colors.red,
+        focusColor: Color(0xffFE7012),
+        cardColor: Color(0xffFEFCFE),
+        primaryColorDark: Color(0xff090808),
         fontFamily: 'QuickSandSemiBold',
         textTheme: TextTheme(
           title: TextStyle(fontSize: 14.0, fontFamily: "QuickSandSemiBold"),
