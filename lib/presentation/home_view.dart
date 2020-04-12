@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_fitness_app/presentation/activities_list.dart';
+import 'package:flutter_fitness_app/data/models/activities_list.dart';
 import 'package:flutter_fitness_app/presentation/status_card.dart';
 
 import '../widgets/custom_appbar.dart';

@@ -4,7 +4,7 @@ class ActivitiesList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.red,
+      color: Colors.amber,
       width: 1111,
       height: 66,
       child: SingleChildScrollView(

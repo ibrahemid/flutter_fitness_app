@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_fitness_app/models/glass.dart';
-import 'package:flutter_fitness_app/repository/glassRepo.dart';
+import 'package:flutter_fitness_app/data/models/glass.dart';
+import 'package:flutter_fitness_app/data/repositories/glassRepo.dart';
 
 class WaterIndicatorRow extends StatefulWidget {
   @override

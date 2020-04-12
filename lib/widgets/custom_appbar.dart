@@ -9,6 +9,9 @@ class CustomAppBar extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
+          Icon(
+            FontAwesomeIcons.search,
+          ),
           Container(
             width: 34,
             height: 34,
@@ -17,11 +20,8 @@ class CustomAppBar extends StatelessWidget {
                 image: DecorationImage(
                     fit: BoxFit.fill,
                     image: NetworkImage(
-                        "https://qph.fs.quoracdn.net/main-raw-160579021-obaxaamtbbfzqtgtgpbwxcorldpmqdsh.jpeg"))),
-          ),
-          Icon(
-            FontAwesomeIcons.search,
-          ),
+                        "https://avatarfiles.alphacoders.com/952/95227.jpg"))),
+          )
         ],
       ),
     );

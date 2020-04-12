@@ -1,6 +1,7 @@
 import 'dart:math';
 
-import 'package:flutter_fitness_app/models/glass.dart';
+import 'package:flutter_fitness_app/data/models/glass.dart';
+
 
 class GlassListRepo {
   final size;
