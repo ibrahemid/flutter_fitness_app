@@ -13,27 +13,7 @@ class HomeView extends StatefulWidget {
 
 class _HomeView extends State<HomeView> {
   int _selectedIndex = 0;
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-  static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Index 0: Home',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 1: Business',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 2: School',
-      style: optionStyle,
-    ),
-  ];
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
+  int _currentTab = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -47,28 +27,40 @@ class _HomeView extends State<HomeView> {
           backgroundColor: Theme.of(context).primaryColor,
           items: <BottomNavigationBarItem>[
             BottomNavigationBarItem(
-                icon: Icon(Icons.home, color: Theme.of(context).focusColor),
-                title: Text('')),
+              icon: Icon(Icons.home),
+              title: SizedBox.shrink(),
+            ),
             BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.business,
-                  color: Theme.of(context).backgroundColor,
-                ),
-                title: Text('')),
+              icon: Icon(
+                Icons.business,
+                //           color: Theme.of(context).backgroundColor,
+              ),
+              title: SizedBox.shrink(),
+            ),
             BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.school,
-                  color: Theme.of(context).backgroundColor,
-                ),
-                title: Text('')),
+              icon: Icon(
+                Icons.school,
+//                color: Theme.of(context).backgroundColor,
+              ),
+              title: SizedBox.shrink(),
+            ),
           ],
           showSelectedLabels: false,
           showUnselectedLabels: false,
-          currentIndex: _selectedIndex,
+          currentIndex: _currentTab,
+
+          onTap: (int index) {
+            _currentTab = index;
+//            setState(() {
+//              _currentTab = index;
+//            });
+          },
           selectedItemColor: Colors.amber[800],
 //          onTap: _onItemTapped,
         ),
       ),
+
+//      CustomNavigationBar(selectedIndex: _selectedIndex),
       backgroundColor: Theme.of(context).primaryColor,
       body: Container(
         padding: EdgeInsets.all(0),
@@ -109,3 +101,51 @@ class _HomeView extends State<HomeView> {
     );
   }
 }
+//
+//class CustomNavigationBar extends StatelessWidget {
+//  const CustomNavigationBar({
+//    Key key,
+//    @required int selectedIndex,
+//  })  : _selectedIndex = selectedIndex,
+//        super(key: key);
+//
+//  final int _selectedIndex;
+//
+//  @override
+//  Widget build(BuildContext context) {
+//    return Container(
+////        height: 50,
+//      padding: EdgeInsets.all(0),
+//      margin: EdgeInsets.all(0),
+//      color: Theme.of(context).primaryColor,
+//      child: BottomNavigationBar(
+//        backgroundColor: Theme.of(context).primaryColor,
+//        items: <BottomNavigationBarItem>[
+//          BottomNavigationBarItem(
+//            icon: Icon(Icons.home, color: Theme.of(context).focusColor),
+//            title: SizedBox.shrink(),
+//          ),
+//          BottomNavigationBarItem(
+//            icon: Icon(
+//              Icons.business,
+//              color: Theme.of(context).backgroundColor,
+//            ),
+//            title: SizedBox.shrink(),
+//          ),
+//          BottomNavigationBarItem(
+//            icon: Icon(
+//              Icons.school,
+//              color: Theme.of(context).backgroundColor,
+//            ),
+//            title: SizedBox.shrink(),
+//          ),
+//        ],
+//        showSelectedLabels: false,
+//        showUnselectedLabels: false,
+//        currentIndex: _selectedIndex,
+//        selectedItemColor: Colors.amber[800],
+////          onTap: _onItemTapped,
+//      ),
+//    );
+//  }
+//}
