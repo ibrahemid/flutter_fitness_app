@@ -12,8 +12,14 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeView extends State<HomeView> {
-  int _selectedIndex = 0;
-  int _currentTab = 0;
+  int _selectedIndex;
+  int _currentTab;
+  @override
+  void initState() {
+    super.initState();
+    _selectedIndex = 0;
+    _currentTab = 0;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -51,9 +57,9 @@ class _HomeView extends State<HomeView> {
 
           onTap: (int index) {
             _currentTab = index;
-//            setState(() {
-//              _currentTab = index;
-//            });
+            setState(() {
+              _currentTab = index;
+            });
           },
           selectedItemColor: Colors.amber[800],
 //          onTap: _onItemTapped,
