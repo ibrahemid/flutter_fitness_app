@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_fitness_app/data/models/glass.dart';
 import 'package:flutter_fitness_app/data/repositories/glassRepo.dart';
+import 'package:flutter_fitness_app/widgets/water_glass.dart';
 
 class WaterIndicatorRow extends StatefulWidget {
   @override
@@ -17,8 +17,8 @@ class _WaterIndicatorRowState extends State<WaterIndicatorRow> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            for (GlassIcon x in _glassListRepo.glassIcons)
-              GestureDetector(child: Icon(x.icon))
+            for (bool x in [true, true, true, false, false, false])
+              WaterGlass(isFilled: x)
           ],
         ));
   }

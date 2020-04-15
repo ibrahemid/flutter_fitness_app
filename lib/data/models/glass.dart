@@ -6,6 +6,6 @@ class GlassIcon {
   final IconData icon;
   GlassIcon(this.isFilled)
       : icon = isFilled
-            ? MyFlutterApp.glass_icon_filled
-            : MyFlutterApp.glass_icon_empty;
+            ? MyFontIcons.glass_icon_filled
+            : MyFontIcons.glass_icon_empty;
 }
