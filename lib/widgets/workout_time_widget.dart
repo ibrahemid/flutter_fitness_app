@@ -15,7 +15,7 @@ class WorkoutTimeWidget extends StatelessWidget {
         ),
         Container(
 //          color: Colors.amber,
-          width: 112, //todo check this
+          width: 120, //todo check this
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -23,7 +23,7 @@ class WorkoutTimeWidget extends StatelessWidget {
               Text(
                 "8:00  To 9:00 Am",
                 style: TextStyle(
-                  fontSize: 14,
+                  fontSize: 15,
                   fontFamily: 'QuickSandBold',
                   color: Color(0xff383454),
                 ),
@@ -53,7 +53,7 @@ class WorkoutTimeWidget extends StatelessWidget {
                 ],
               ),
               SizedBox(
-                height: 4,
+                height: 8,
               ),
               ClipRRect(
                 borderRadius: BorderRadius.circular(55),

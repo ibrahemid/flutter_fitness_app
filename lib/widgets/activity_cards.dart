@@ -41,7 +41,7 @@ class _ActivityCardsState extends State<ActivityCards> {
         });
       },
       child: Container(
-        margin: EdgeInsets.symmetric(horizontal: 10, vertical: 18),
+        margin: EdgeInsets.only(left: 10, right: 10, top: 18, bottom: 12),
         height: 92,
         width: 72,
         decoration: BoxDecoration(

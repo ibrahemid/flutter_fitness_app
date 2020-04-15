@@ -6,10 +6,14 @@ class CustomChart extends StatefulWidget {
   final List<ChartData> chartData;
   final double chartSize;
   final int holeSize;
+  final String text;
+  final bool isSmall;
 
   const CustomChart(
       {Key key,
       @required this.chartData,
+      @required this.text,
+      @required this.isSmall,
       @required this.chartSize,
       @required this.holeSize})
       : super(key: key);
@@ -44,8 +48,10 @@ class _CustomChartState extends State<CustomChart> {
               child: Align(
             alignment: Alignment.center,
             child: Text(
-              "70.2%",
-              style: Theme.of(context).textTheme.body2,
+              "${widget.text}",
+              style: widget.isSmall
+                  ? Theme.of(context).textTheme.caption
+                  : Theme.of(context).textTheme.body2,
             ),
           )),
           chart,

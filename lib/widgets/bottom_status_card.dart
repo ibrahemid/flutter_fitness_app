@@ -9,30 +9,39 @@ class BottomStatusCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(18),
+      margin: EdgeInsets.only(bottom: 0, right: 18, top: 0, left: 18),
       child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: <Widget>[
-          Container(
-            padding: EdgeInsets.all(4),
-            decoration: BoxDecoration(
-                color: Colors.white,
-                shape: BoxShape.rectangle,
-                borderRadius: BorderRadius.circular(4)),
-            child: Icon(
-              FontAwesomeIcons.accessibleIcon,
-              size: 15,
+          Flexible(
+            flex: 1,
+            child: Container(
+              padding: EdgeInsets.all(4),
+              margin: EdgeInsets.only(bottom: 30, left: 8, right: 8),
+              decoration: BoxDecoration(
+                  color: Colors.white,
+                  shape: BoxShape.rectangle,
+                  borderRadius: BorderRadius.circular(4)),
+              child: Icon(
+                FontAwesomeIcons.accessibleIcon,
+                size: 15,
+              ),
             ),
           ),
-          WorkoutTimeWidget(),
-          CustomChart(
-            chartData: [
-              ChartData(0, 30, Color(0xffFDFBFE)),
-              ChartData(1, 70, Color(0xffFE6F14)),
-            ],
-            holeSize: 4,
-            chartSize: 77,
+          Flexible(flex: 3, child: WorkoutTimeWidget()),
+          Flexible(
+            fit: FlexFit.tight,
+            flex: 2,
+            child: CustomChart(
+              chartData: [
+                ChartData(0, 30, Color(0xffFDFBFE)),
+                ChartData(1, 66, Color(0xffFE6F14)),
+              ],
+              holeSize: 17,
+              chartSize: 108,
+              text: "66%",
+              isSmall: true,
+            ),
           )
         ],
       ),

@@ -115,6 +115,8 @@ class _ChartTopCardState extends State<ChartTopCard> {
             ],
             holeSize: 19,
             chartSize: 140,
+            text: "77.2%",
+            isSmall: false,
           ),
         ],
       ),
