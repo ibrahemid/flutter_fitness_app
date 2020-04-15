@@ -1,5 +1,7 @@
 import 'package:charts_flutter/flutter.dart' as charts;
 import 'package:flutter/material.dart';
+import 'package:flutter_fitness_app/data/models/Chart_data.dart';
+import 'package:flutter_fitness_app/widgets/custom_chart.dart';
 
 // this should
 class ChartTopCard extends StatefulWidget {
@@ -45,7 +47,12 @@ class _ChartTopCardState extends State<ChartTopCard> {
               style: Theme.of(context).textTheme.body2,
             ),
           )),
-          chart,
+          CustomChart(
+            chartData: [
+              ChartData(0, 30, Color(0xffFDFBFE)),
+              ChartData(1, 70, Color(0xffFE6F14)),
+            ],
+          ),
         ],
       ),
     );
@@ -101,19 +108,17 @@ class _ChartTopCardState extends State<ChartTopCard> {
               ],
             ),
           ),
-          chartWidget,
+          CustomChart(
+            chartData: [
+              ChartData(0, 30, Color(0xffFDFBFE)),
+              ChartData(1, 70, Color(0xffFE6F14)),
+            ],
+            holeSize: 19,
+            chartSize: 140,
+          ),
         ],
       ),
     );
 // end of build
   }
-}
-
-class ChartData {
-  final int domainFn;
-  final int measureFn;
-  final charts.Color color;
-  ChartData(this.domainFn, this.measureFn, Color color)
-      : this.color = charts.Color(
-            g: color.green, b: color.blue, r: color.red, a: color.alpha);
 }
