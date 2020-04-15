@@ -1,4 +1,7 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_fitness_app/core/overlay_container.dart';
 import 'package:flutter_fitness_app/presentation/my_flutter_app_icons.dart';
 
 class WaterGlass extends StatefulWidget {
@@ -11,19 +14,34 @@ class WaterGlass extends StatefulWidget {
 
 class _WaterGlassState extends State<WaterGlass> {
   bool _isFilled;
+  bool _dropdownShown;
   @override
   void initState() {
     super.initState();
     _isFilled = widget.isFilled;
+    _dropdownShown = false;
   }
 
-  Widget _buildIcon(bool isFilled) {
-    return isFilled
+  Widget _buildIcon() {
+    return _isFilled
         ? Icon(
             MyFontIcons.glass_icon_filled,
             key: UniqueKey(),
           )
         : Icon(MyFontIcons.glass_icon_empty, key: UniqueKey());
+  }
+
+  bool clap() {
+    setState(() {
+      //todo remove setStates
+      _dropdownShown = !_dropdownShown;
+    });
+
+    Future.delayed(const Duration(milliseconds: 1000), () {
+      setState(() {
+        _dropdownShown = !_dropdownShown;
+      });
+    });
   }
 
   @override
@@ -33,16 +51,26 @@ class _WaterGlassState extends State<WaterGlass> {
           setState(() {
             _isFilled = !_isFilled;
           });
+          clap();
         },
-        child: AnimatedSwitcher(
-            transitionBuilder: (Widget child, Animation<double> animation) {
-//              return FadeTransition(
-//                opacity: new CurvedAnimation(
-//                    parent: animation, curve: Curves.easeIn),
-//              );
-              return ScaleTransition(child: child, scale: animation);
-            },
-            duration: Duration(milliseconds: 600),
-            child: _buildIcon(_isFilled)));
+        child: Stack(
+          children: <Widget>[
+            OverlayContainer(
+                show: _dropdownShown,
+                position: OverlayContainerPosition(),
+                child: Text(
+                  "👏",
+                  style: TextStyle(fontSize: 299),
+                )),
+            AnimatedSwitcher(
+//            transitionBuilder: (Widget child, Animation<double> animation) {
+//              return ScaleTransition(
+//                  child: child,
+//                  scale: animation); //ToDo replace with directional Fade-in
+//            },
+                duration: Duration(milliseconds: 400),
+                child: _buildIcon()),
+          ],
+        ));
   }
 }

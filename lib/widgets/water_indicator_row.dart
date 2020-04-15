@@ -17,7 +17,16 @@ class _WaterIndicatorRowState extends State<WaterIndicatorRow> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            for (bool x in [true, true, true, false, false, false])
+            for (bool x in [
+              true,
+              true,
+              true,
+              false,
+              false,
+              false,
+              false,
+              false
+            ])
               WaterGlass(isFilled: x)
           ],
         ));
