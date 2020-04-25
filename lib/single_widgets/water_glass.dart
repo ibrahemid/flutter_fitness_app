@@ -1,8 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_fitness_app/core/my_flutter_app_icons.dart';
 import 'package:flutter_fitness_app/core/overlay_container.dart';
-import 'package:flutter_fitness_app/presentation/my_flutter_app_icons.dart';
 
 class WaterGlass extends StatefulWidget {
   final bool isFilled;

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_fitness_app/widgets/chart_top_card.dart';
-import 'package:flutter_fitness_app/widgets/nutritionWidget.dart';
-import 'package:flutter_fitness_app/widgets/water_indicator_row.dart';
-import 'package:flutter_fitness_app/widgets/water_text_row.dart';
+import 'package:flutter_fitness_app/Presentation/chart_top_card.dart';
+import 'package:flutter_fitness_app/single_widgets/nutritionWidget.dart';
+import 'package:flutter_fitness_app/single_widgets/water_indicator_row.dart';
+import 'package:flutter_fitness_app/single_widgets/water_text_row.dart';
 
 class StatusCard extends StatefulWidget {
   StatusCard({Key key}) : super(key: key);

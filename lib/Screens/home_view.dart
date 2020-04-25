@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_fitness_app/presentation/status_card.dart';
-import 'package:flutter_fitness_app/widgets/activity_cards.dart';
-import 'package:flutter_fitness_app/widgets/bottom_status_card.dart';
+import 'package:flutter_fitness_app/Presentation/activity_cards.dart';
+import 'package:flutter_fitness_app/Presentation/status_card.dart';
+import 'package:flutter_fitness_app/single_widgets/bottom_status_card.dart';
 
-import '../widgets/custom_appbar.dart';
-import '../widgets/greeting_text.dart';
-import 'my_app_bar.dart';
+import '../Presentation/my_bottom_bar.dart';
+import '../Presentation/my_top_bar.dart';
+import '../single_widgets/greeting_text.dart';
 
 class HomeView extends StatefulWidget {
   @override

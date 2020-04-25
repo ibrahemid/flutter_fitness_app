@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_fitness_app/data/models/Chart_data.dart';
-import 'package:flutter_fitness_app/widgets/workout_time_widget.dart';
+import 'package:flutter_fitness_app/single_widgets/workout_time_widget.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import 'custom_chart.dart';
+import '../core/custom_chart.dart';
 
 class BottomStatusCard extends StatelessWidget {
   @override

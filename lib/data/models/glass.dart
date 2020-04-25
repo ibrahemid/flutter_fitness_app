@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_fitness_app/presentation/my_flutter_app_icons.dart';
+import 'package:flutter_fitness_app/core/my_flutter_app_icons.dart';
 
 class GlassIcon {
   final bool isFilled;

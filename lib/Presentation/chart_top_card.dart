@@ -1,7 +1,7 @@
 import 'package:charts_flutter/flutter.dart' as charts;
 import 'package:flutter/material.dart';
+import 'package:flutter_fitness_app/core/custom_chart.dart';
 import 'package:flutter_fitness_app/data/models/Chart_data.dart';
-import 'package:flutter_fitness_app/widgets/custom_chart.dart';
 
 // this should
 class ChartTopCard extends StatefulWidget {
